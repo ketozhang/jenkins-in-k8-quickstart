@@ -20,11 +20,11 @@ pipelineJob('test') {
                         url('https://github.com/ketozhang/jenkins-in-k8-quickstart')
                     }
                     branches('*/main')
-                    extensions (
-                        cloneOptions (
+                    extensions {
+                        cloneOptions {
                             shallow(true)
-                        )
-                    )
+                        }
+                    }
                 }
             }
             scriptPath('jenkins/hello-world.jenkinsfile')

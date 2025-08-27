@@ -1,0 +1,17 @@
+pipeline {
+    agent {
+        kubernetes {}
+    }
+    stages {
+        stage("Setup Environment") {
+            steps {
+                sh 'printenv'
+            }
+        }
+        stage ("Hello") {
+            steps {
+                sh "sleep 30 && echo 'Hello,  World!'"
+            }
+        }
+    }
+}

@@ -13,12 +13,18 @@
     helmfile apply .
     ```
 
-4. Port forward the Jenkins service.
+4. Follow the monitoring and connection instructions
 
-    ```sh
-    kubectl port-forward -n jenkins svc/jenkins-operator-http-jenkins 8080:8080
     ```
+    1. Watch Jenkins instance being created:
+    $ kubectl --namespace jenkins get pods -w
 
-    You may need to wait a few minutes to be ready.
+    2. Get Jenkins credentials:
+    $ kubectl --namespace jenkins get secret jenkins-operator-credentials-jenkins -o 'jsonpath={.data.user}' | base64 -d
+    $ kubectl --namespace jenkins get secret jenkins-operator-credentials-jenkins -o 'jsonpath={.data.password}' | base64 -d
+
+    3. Connect to Jenkins (actual Kubernetes cluster):
+    $ kubectl --namespace jenkins port-forward jenkins-jenkins 8080:8080
+    ```
 
 5. Open http://localhost:8080/ and navigate to the Jenkins pipeline named "test"

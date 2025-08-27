@@ -9,16 +9,16 @@
 
 3. Apply the helmfile
 
-  ```sh
-  helmfile apply .
-  ```
+    ```sh
+    helmfile apply .
+    ```
 
 4. Port forward the Jenkins service.
 
-  ```sh
-  kubectl port-forward -n jenkins svc/jenkins-operator-http-jenkins 8080:8080
-  ```
+    ```sh
+    kubectl port-forward -n jenkins svc/jenkins-operator-http-jenkins 8080:8080
+    ```
 
-  You may need to wait a few minutes to be ready.
+    You may need to wait a few minutes to be ready.
 
 5. Open http://localhost:8080/ and navigate to the Jenkins pipeline named "test"

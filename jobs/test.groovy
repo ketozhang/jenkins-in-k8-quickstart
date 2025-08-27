@@ -21,9 +21,9 @@ pipelineJob('test') {
                     }
                     branches('*/main')
                     extensions (
-                        cloneOptions {
+                        cloneOptions (
                             shallow(true)
-                        }
+                        )
                     )
                 }
             }

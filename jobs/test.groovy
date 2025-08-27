@@ -27,7 +27,7 @@ pipelineJob('test') {
                     }
                 }
             }
-            scriptPath('jenkins/hello-world.jenkinsfile')
+            scriptPath('pipelines/hello-world.jenkinsfile')
         }
     }
 }

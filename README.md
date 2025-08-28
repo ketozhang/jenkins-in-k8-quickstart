@@ -1,6 +1,11 @@
 ## Getting Started
 
-1. Set up a Kubernetes cluster
+1. Prerequisite
+
+    - Existing Kubernetes cluster
+    - helmfile
+    - kubectl
+
 2. Authenticate to Kubernetes cluster. Verify the correct cluster is selected
 
     ```sh

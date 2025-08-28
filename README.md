@@ -5,6 +5,15 @@
     - Existing Kubernetes cluster
     - helmfile
     - kubectl
+  
+> [!NOTE]
+> For local MacOS, you can quickly set up _kind_ as your cluster
+> 
+> ```
+> brew install kind
+> kind create cluster
+> ```
+
 
 2. Authenticate to Kubernetes cluster. Verify the correct cluster is selected
 
